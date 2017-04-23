@@ -7,7 +7,6 @@ Menu management system app.
                 |
                 |__ b   menu-domain
                 |
-                |
                 \__ c   menu-services
 
 + [a] This is top pom that manages all dependencies and biulds other modules.
