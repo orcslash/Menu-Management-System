@@ -37,12 +37,12 @@ public class ItemServiceImplTest extends AbstractTransactionalJUnit4SpringContex
 
 	@Test
 	public void shouldCreateItemsAndRemoveItFromDB() {
-		// Create Menu And Retrieves It
+		// Create Menu And Retrieve It
 		itemServiceImpl.createItem(createListOfItems().get(0));
 		itemList = itemServiceImpl.retrieveAllItems();
 		assertThat(itemList.size(), is(1));
 
-		// Delete Menu And Assert If It Is Removed
+		// Delete Menu And Assert If It Was Removed
 		itemServiceImpl.deleteItem((itemList.get(0).getId()));
 		itemList = itemServiceImpl.retrieveAllItems();
 		assertThat(itemList, is(empty()));
@@ -63,7 +63,7 @@ public class ItemServiceImplTest extends AbstractTransactionalJUnit4SpringContex
 		menu = menuServiceImpl.retrieveMenu(id);
 		assertThat(menu.getMenuItems().size(), is(2));
 		
-		// Call Item Service
+		// Get All Items
 		itemList = itemServiceImpl.retrieveAllItems();
 		assertThat(itemList.size(), is(2));
 
