@@ -24,7 +24,7 @@ public interface ItemService {
 
 	/**
 	 * Updates existing item with new values.
-	 * @param item object with new values..
+	 * @param item object with new values.
 	 */
 	void updateItem(Item item);
 
